@@ -1,0 +1,19 @@
+
+<!-- Component to display the questions, and the associated likes -->
+
+<md-content class="md-padding" color="primary" layout-xs="column" layout="row">
+    <div flex="60" flex-offset="20">
+        <h2 class="md-primary">Please click on any question text or heading to view the answers!</h2>
+        <question ng-repeat="question in vm.questionMap | orderObjectBy:'lastUpdatedTime':true"
+                  linkable-component="true"
+                  question-obj="question"
+                  on-click-upvote="vm.upVote(question.Id)"
+                  on-click-downvote="vm.downVote(question.Id)"
+                  question-index="'Question ' + ($index+1)">
+        </question>
+    </div>
+</md-content>
+
+
+
+
