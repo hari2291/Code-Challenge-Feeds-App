@@ -1,6 +1,6 @@
 
 /* 
-	Create the module and inject uiRouter dependency.
+	Create the module and inject dependencies.
 */
 
 var app = angular.module('feedsApp',['ngMaterial','ngMessages','ui.router']);
