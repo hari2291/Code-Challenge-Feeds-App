@@ -115,9 +115,9 @@ app.config(function($stateProvider,$locationProvider,$mdThemingProvider) {
     $locationProvider.html5Mode(true);
 
     $mdThemingProvider.theme('feeds')
-        .primaryPalette('amber')
+        .primaryPalette('red')
         .backgroundPalette('blue-grey')
-        .accentPalette('orange');
+        .accentPalette('deep-orange');
 });
 
 
