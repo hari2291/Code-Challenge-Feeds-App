@@ -1,0 +1,23 @@
+<!-- Component to display an answer -->
+
+<md-list-item class="md-3-line md-long-text">
+    <img src={{vm.answerObj.created_by.Avatar}}
+         class="md-avatar"
+         alt="No Avatar"
+         on-error-src="/images/profile-placeholder.png"/>
+    <div class="md-list-item-text">
+        <h3>
+            <b>{{vm.answerObj.created_by.Name+' '+answer.created_by.Surname}}</b>
+        </h3>
+        <br>
+        <p>
+            {{vm.answerObj.created_at}}
+        </p>
+        <br>
+        <p>
+            <b>{{vm.answerObj.Answer}}</b>
+        </p>
+        <br><br>
+    </div>
+</md-list-item>
+<md-divider></md-divider>
