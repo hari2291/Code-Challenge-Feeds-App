@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Feeds Application-Workspan</title>
+		<base href="/" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Angular Material style sheet -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.css">
+
+		<!-- AngularJS Dependencies -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-aria.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+		<script src="https://unpkg.com/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  		
+  		<!-- Dependencies for styling -->
+  		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+  		<link rel="stylesheet" type="text/css" href="/styles/styles.css">
+  		
+  		<!-- Application -->
+  		<script src="app.js"></script>
+		<script src="components/question/question.component.js"></script>
+		<script src="components/answer/answer.component.js"></script>
+  		<script src="components/questions-list/questions-list.component.js"></script>
+		<script src="components/answer-section/answer-section.component.js"></script>
+  		<script src="services/feeds.services.js"></script>
+
+		<!-- Angular Material Library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.8/angular-material.min.js"></script>
+
+	</head>
+	<body ng-app="feedsApp" md-theme="feeds">
+		<ui-view></ui-view>
+	</body>
+</html>
