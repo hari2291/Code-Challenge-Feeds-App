@@ -1,0 +1,11 @@
+{
+  "name": "Feeds-Application-Code-Challenge",
+  "version": "1.0.0",
+  "description": "An application created to display feeds data from a third party source",
+  "main": "server.js",
+  "author": "Harshith Sharma",
+  "license": "",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
