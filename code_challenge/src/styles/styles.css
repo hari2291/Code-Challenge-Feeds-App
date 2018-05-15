@@ -1,0 +1,36 @@
+body{
+    position: relative;
+    margin: auto;
+}
+
+.md-icon-button.clicked md-icon{
+    color: cornflowerblue;
+}
+
+.questionText:hover,
+md-card-header-text{
+    cursor: pointer;
+}
+
+md-button.md-feeds-theme{
+    background-color: #3F51B5;
+    color: white;
+}
+
+.md-button.md-primary.md-feeds-theme{
+    background-color: #3F51B5;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+md-icon.homeIcon,
+a.md-feeds-theme{
+    color: rgb(35, 47, 109);
+}
+
+md-card md-card-actions:not(.layout-column) .md-button.thumbsIcon.md-icon-button{
+    margin-right: 0;
+}
