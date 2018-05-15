@@ -1,0 +1,45 @@
+<md-card>
+    <md-card-header>
+        <md-card-avatar>
+            <img class="md-user-avatar" src="images/question-icon.png"/>
+        </md-card-avatar>
+        <md-card-header-text ng-attr-ui-sref="{{vm.linkableComponent ? 'answerSection({questionId:vm.questionObj.Id})' : ''}}">
+            <span ng-if="!vm.questionIndex" class="md-title">Question</span>
+            <span class="md-title">{{vm.questionIndex}}</span>
+            <span ng-if="vm.questionObj.lastUpdatedTime"
+                  class="md-subhead">
+                Last Answered On:
+                <b>
+                    {{vm.questionObj.lastUpdatedOn}}
+                </b>
+            </span>
+            <span ng-if="!vm.questionObj.lastUpdatedTime"
+                  class="md-subhead">
+                Yet to be Answered
+            </span>
+        </md-card-header-text>
+    </md-card-header>
+    <md-card-content>
+        <p ng-attr-ui-sref="{{vm.linkableComponent ? 'answerSection({questionId:vm.questionObj.Id})' : ''}}"
+           class="questionText md-body-1">
+            {{vm.questionObj.Text}}
+        </p>
+    </md-card-content>
+    <md-card-actions layout="row"
+                     layout-align="end center">
+        <md-button class="md-icon-button thumbsIcon"
+                ng-click="vm.onClickUpvote({id: vm.questionObj.id})"
+                ng-class="vm.questionObj.activeVote == 'upvotes' ? 'clicked':''">
+            <md-icon md-svg-icon="/images/icons/thumbs-up.svg">
+            </md-icon>
+        </md-button>
+        {{vm.questionObj.upvotes}}
+        <md-button class="md-icon-button thumbsIcon"
+                   ng-click="vm.onClickDownvote({id: vm.questionObj.id})"
+                   ng-class="vm.questionObj.activeVote == 'downvotes' ? 'clicked':''">
+            <md-icon md-svg-icon="/images/icons/thumbs-down.svg">
+            </md-icon>
+        </md-button>
+        {{vm.questionObj.downvotes}}
+    </md-card-actions>
+</md-card>
