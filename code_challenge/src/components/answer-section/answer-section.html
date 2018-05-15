@@ -1,0 +1,49 @@
+<!-- This component displays the answers and the selected question -->
+
+<md-content>
+<div flex="80" flex-offset="10">
+    <a ui-sref="home()">
+        <md-button class="md-icon-button">
+            <md-icon md-svg-icon="/images/icons/home-icon.svg" class="homeIcon"></md-icon>
+        </md-button><span class="md-accent"><b>Home</b></span>
+    </a>
+    <question question-obj="vm.question"
+              linkable-component="false"
+              on-click-upvote="vm.upVote(vm.question.Id)"
+              on-click-downvote="vm.downVote(vm.question.Id)">
+    </question>
+    <form name="addAnswerForm" ng-submit="vm.addNewAnswer()" novalidate>
+        <md-subheader class="md-no-sticky"><h2>Add your answer!</h2></md-subheader>
+        <md-input-container class="md-block">
+            <label>Answer</label>
+            <input required md-no-asterisk name="answer" ng-model="vm.addAnswerForm.answer">
+            <div ng-messages="projectForm.description.$error">
+                <div ng-message="required">Please enter your comment!</div>
+            </div>
+        </md-input-container>
+        <div layout="row">
+            <md-input-container flex="33">
+                <label>First Name</label>
+                <input name="firstName" ng-model="vm.addAnswerForm.firstName">
+            </md-input-container>
+            <md-input-container flex="33">
+                <label>Last Name</label>
+                <input name="lastName" ng-model="vm.addAnswerForm.lastName">
+            </md-input-container>
+            <md-input-container flex="33">
+                <label>Avatar</label>
+                <input name="avatar" ng-model="vm.addAnswerForm.avatar">
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <md-button class="md-primary" type="submit">Submit</md-button>
+        </div>
+    </form>
+    <md-list flex>
+        <md-subheader class="md-no-sticky"><h2>Answers</h2></md-subheader>
+        <answer ng-repeat="answer in vm.answers | orderObjectBy:'createdDateTime':true"
+                answer-obj="answer">
+        </answer>
+    </md-list>
+</div>
+</md-content>
